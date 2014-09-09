@@ -1080,6 +1080,7 @@ public abstract class AbstractQueuedSynchronizer
     }
 
     /**
+     * 此方法若要是的所有被阻塞的操作恢复执行时，应该返回一个true值，否则应该返回一个false
      * Attempts to set the state to reflect a release in exclusive
      * mode.
      *
@@ -1142,6 +1143,7 @@ public abstract class AbstractQueuedSynchronizer
     }
 
     /**
+     * 此方法若要是的所有被阻塞的操作恢复执行时，应该返回一个true值，否则应该返回一个false
      * Attempts to set the state to reflect a release in shared mode.
      *
      * <p>This method is always invoked by the thread performing release.
@@ -1251,6 +1253,7 @@ public abstract class AbstractQueuedSynchronizer
     }
 
     /**
+     * 根据此段逻辑， 此方法若要是的所有被阻塞的操作恢复执行时，tryRelase应该返回一个true值，否则应该返回一个false
      * Releases in exclusive mode.  Implemented by unblocking one or
      * more threads if {@link #tryRelease} returns true.
      * This method can be used to implement method {@link Lock#unlock}.
@@ -1332,6 +1335,7 @@ public abstract class AbstractQueuedSynchronizer
     }
 
     /**
+     * 根据此段逻辑， 此方法若要是的所有被阻塞的操作恢复执行时，tryRelase应该返回一个true值，否则应该返回一个false
      * Releases in shared mode.  Implemented by unblocking one or more
      * threads if {@link #tryReleaseShared} returns true.
      *
